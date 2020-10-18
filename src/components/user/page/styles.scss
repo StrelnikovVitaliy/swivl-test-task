@@ -1,0 +1,29 @@
+.user-page {
+  padding: 5px 15px;
+
+  &-avatar {
+    grid-column-start: 4;
+    grid-column-end: 13;
+    grid-row: span 6;
+    padding-bottom: 50px;
+  }
+
+  &-headerData {
+    grid-column-start: 1;
+    grid-column-end: 4;
+    text-decoration: underline;
+    font-size: 1.2em;
+    min-width: 300px;
+  }
+
+  &-homeLink {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+
+
+  &-profileText {
+    grid-column-start: 1;
+    grid-column-end: 13;
+  }
+}
