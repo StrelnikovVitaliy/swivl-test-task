@@ -25,11 +25,15 @@ const reducer = (state = defaultState, {type, payload}) => {
     case actionType.RESET_PAGE:
       return {...state, currentPage: 1};
 
+    case actionType.SET_PER_PAGE:
+      return {...state, perPage: payload};
+    case actionType.RESET_PER_PAGE:
+      return {...state, perPage: 100};
+
     case actionType.SHOW_LOADER:
       return {...state, loader: true};
     case actionType.HIDE_LOADER:
       return {...state, loader: false};
-
     default:
       return state;
   }
