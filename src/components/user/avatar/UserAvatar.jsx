@@ -1,6 +1,6 @@
 import React from 'react';
 import {system} from '../../../functions/systemConstants';
-
+import './styles.scss'
 const {
   AVATAR: {
     SIZE:

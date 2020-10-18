@@ -1,11 +1,12 @@
 .user-page {
   padding: 5px 15px;
+  color: black;
+  font-weight: bold;
 
   &-avatar {
     grid-column-start: 4;
     grid-column-end: 13;
     grid-row: span 6;
-    padding-bottom: 50px;
   }
 
   &-headerData {
@@ -19,6 +20,18 @@
   &-homeLink {
     grid-column-start: 1;
     grid-column-end: 13;
+    width: fit-content;
+    border-radius: 5px;
+    font-style: italic;
+    margin-left: 18px;
+    margin-top: 5px;
+    background-color: rgba(0, 0, 0, 0.1);
+
+
+    &:hover {
+      font-weight: bold;
+      background-color: rgba(0, 0, 0, 0.2);
+    }
   }
 
 

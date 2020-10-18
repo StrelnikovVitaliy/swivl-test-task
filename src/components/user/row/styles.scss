@@ -5,12 +5,14 @@
   align-items: center;
   text-decoration: none;
   color: black;
+  font-weight: bold;
   cursor: pointer;
   grid-template-columns: 40px minmax(100px, 1fr) minmax(500px, 3fr) minmax(200px, 2fr);
   grid-gap: 15px;
+  padding: 3px 0 ;
 
   &:hover {
-    background: aliceblue;
+    background-color: rgba(0, 0, 0, 0.2);
   }
 
   .anchor {

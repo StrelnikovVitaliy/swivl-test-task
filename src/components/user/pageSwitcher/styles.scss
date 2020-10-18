@@ -2,7 +2,27 @@
   display: grid;
   grid-gap: 5px;
   grid-column: span 12;
-  grid-template-columns: 150px 150px;
+  grid-template-columns: 75px 150px;
   padding: 10px 0;
   justify-content: center;
+
+  button {
+    background-color: grey;
+    border: 1px solid white;
+    border-radius: 3px;
+    color: black;
+    font-weight: bold;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.2);
+    }
+  }
+  input{
+    background-color: grey;
+    border: 2px solid white;
+    border-radius: 3px;
+    color: black;
+    font-weight: bold;
+  }
 }

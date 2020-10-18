@@ -5,8 +5,8 @@ import {capitalizeText} from '../../../functions/helpers';
 const UserTextData = ({label, text, className = ''}) => {
 
   return <div className={className}>
-    <span className={'label'}>{capitalizeText(label)}: </span>
-    <span data-text={text}>{text}</span>
+    <span className={'label'}>{capitalizeText(label)}:</span>
+    <span data-text={text}> {text}</span>
   </div>;
 };
 
