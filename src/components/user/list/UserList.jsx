@@ -1,6 +1,6 @@
 import React, {useEffect} from 'react';
 import {fetchUsersArray} from '../../../functions/requests/fetchData';
-import {generateUserListBody, getLastUserId} from './utils';
+import {generateUserListBody, getLastUserId, navigateToNewPage} from './utils';
 import {PageSwitcher} from '../pageSwitcher/PageSwitcher';
 import './styles.scss';
 import {useDispatch, useSelector} from 'react-redux';
@@ -10,6 +10,8 @@ import {
   setUserList
 } from '../../../reducers/actions';
 import {Loader} from '../loader/Loader';
+
+
 
 export const UserList = () => {
   const dispatch = useDispatch();
@@ -21,14 +23,18 @@ export const UserList = () => {
       dispatch(setSinceUserId(getLastUserId(result)));
 
     })
-      .finally(() => dispatch(hideLoader()));
+      .finally(() => {
+        dispatch(hideLoader());
+        navigateToNewPage(userList);
+      });
   }, [currentPage]);
 
 
   return (
     <>
       <div className={'user-list'}>
-        {loader ? <Loader/> : generateUserListBody(userList)}
+        {loader ? <Loader/> : null}
+        {generateUserListBody(userList)}
       </div>
       <PageSwitcher/>
     </>

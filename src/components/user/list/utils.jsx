@@ -14,3 +14,10 @@ export const getLastUserId = (data = []) => {
 
   return 0;
 };
+
+export const navigateToNewPage = (userList) => {
+  const nodeToScroll = document.getElementById(`anchor${userList.length}`);
+  if (nodeToScroll) {
+    nodeToScroll.scrollIntoView();
+  }
+};

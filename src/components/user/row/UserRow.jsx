@@ -32,7 +32,7 @@ const UserRow = ({data, index}) => {
 
   return (
     <div className={'user-row'} onClick={openUserProfile}>
-      <span>{index + 1}</span>
+      <span className={'anchor'} id={`anchor${index + 1}`}>{index + 1}</span>
       <UserAvatar src={data[AVATAR_LINK]} size={SMALL}/>
       <UserLink src={data[URL_TO_PROFILE]}/>
       <UserTextData label={LOGIN} text={data[LOGIN]}/>

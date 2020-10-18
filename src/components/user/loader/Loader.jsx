@@ -3,5 +3,7 @@ import loader from '../../../loader.gif';
 import './styles.scss';
 
 export const Loader = () => {
-  return <img className={'loader'} src={loader} alt="loading..."/>;
+  return <div className={'loader'}>
+    <img src={loader} alt="loading..." height={150} width={150}/>
+  </div>;
 };
